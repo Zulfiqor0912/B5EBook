@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "628553918906",
+    "project_id": "ebookexam-65428",
+    "storage_bucket": "ebookexam-65428.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628553918906:android:c94732af428ac1037e9583",
+        "android_client_info": {
+          "package_name": "uz.gita.firebaseexam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628553918906-19oo8bif2pq5fv27v5fbh46lishf8172.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwvhlJmp1EEMrmM5nhlDJLUQcAsg7w760"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628553918906-19oo8bif2pq5fv27v5fbh46lishf8172.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

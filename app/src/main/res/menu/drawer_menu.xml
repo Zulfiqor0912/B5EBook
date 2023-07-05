@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/screenMotivation"
+        android:title="Shaxsiy rivojlanish"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/screenHistory"
+        android:title="Tarixiy"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/screenArtBook"
+        android:title="Badiiy"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/screenPolitical"
+        android:title="Siyosiy"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/screenReligious"
+        android:title="Diniy"
+        app:showAsAction="withText" />
+</menu>

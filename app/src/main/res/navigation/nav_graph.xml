@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.firebaseexam.presentetion.ui.screens.splash.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteScreen"
+        android:name="uz.gita.firebaseexam.presentetion.ui.screens.favourite.FavouriteScreen"
+        android:label="FavouriteScreen"
+        tools:layout="@layout/screen_favourite"/>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="uz.gita.firebaseexam.presentetion.ui.screens.home.HomeScreen"
+        tools:layout="@layout/screen_home"
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_descScreen"
+            app:destination="@id/descScreen"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/descScreen"
+        android:name="uz.gita.firebaseexam.presentetion.ui.screens.desc.DescScreen"
+        tools:layout="@layout/screen_desc"
+        android:label="DescScreen" >
+        <argument
+            android:name="data"
+            app:argType="uz.gita.firebaseexam.data.model.BookData" />
+        <action
+            android:id="@+id/action_descScreen_to_readScreen"
+            app:destination="@id/readScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/readScreen"
+        android:name="uz.gita.firebaseexam.presentetion.ui.screens.read.ReadScreen"
+        android:label="ReadScreen"
+        tools:layout="@layout/screen_read">
+        <argument
+            android:name="data"
+            app:argType="uz.gita.firebaseexam.data.model.BookData" />
+    </fragment>
+</navigation>

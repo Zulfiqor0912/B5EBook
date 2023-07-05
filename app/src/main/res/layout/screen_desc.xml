@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/onPrimary">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/onPrimary"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_collapseMode="pin"
+                app:menu="@menu/info_menu">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/desc_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/baseline_arrow_back_ios_new_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Molxona"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                app:layout_collapseMode="parallax">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/book_image"
+                    android:layout_width="238dp"
+                    android:layout_height="356dp"
+                    android:layout_marginVertical="16dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/book_name_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="16dp"
+                    android:text="Katta O'yin"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/book_image" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/book_author_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="12dp"
+                    android:text="Piter Hopkirk"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="@+id/book_name_desc"
+                    app:layout_constraintTop_toBottomOf="@+id/book_name_desc" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/button_download"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/bg_button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/book_author_desc" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/baseline_save_alt_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/button_download"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/button_download" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/book_info_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="Amid the ongoing deadly power struggle between the top military leaders of Sudan, evacuations have begun, including as part of India’s Operation Kaveri, which has helped more than 3,500 Indian citizens living in the country. Raghuveer Sharma is one of them. He gave UN News a first-hand account of the tragic situation unfolding in Sudan.The World Health Organization (WHO) declared an end to the COVID-19 global public health emergency on 3 May 2023, following more than three years of crisis, and slow recovery – although the virus continues to kill and mutate. UN photographers across the world have captured moments of agony, innovation, and human endurance throughout the pandemic, which has killed nearly seven million people, and infected over 765 million.The number of internally displaced (IDPs) in Sudan has more than doubled in just the last week, since armed clashes erupted between rival militaries in multiple cities across Sudan, the International Organization for Migration (IOM) said on Tuesday.The values of human dignity and freedom, enshrined in the UN’s founding Charter in 1945, have never been so under threat, warned the Secretary-General on Tuesday, delivering a wide-ranging speech in Spain after receiving the Carlos V European Award." />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/read_book_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_button"
+        android:elevation="4dp"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:text="Read Book"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

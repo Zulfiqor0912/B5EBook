@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="nunito_bold">
+        <item name="fontFamily">@raw/nunitobold</item>
+    </style>
+
+    <style name="nunito_italic">
+        <item name="fontFamily">@raw/nunitoitalic</item>
+    </style>
+
+    <style name="nunito_extra_bold">
+        <item name="fontFamily">@raw/nunitoextrabold</item>
+    </style>
+
+    <style name="nunito_regular">
+        <item name="fontFamily">@raw/nunitoregular</item>
+    </style>
+</resources>
