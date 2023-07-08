@@ -14,10 +14,12 @@ data class BookEntity(
     val id: Int = 0,
     val page: String = "",
     val rate: Int = 0,
+    val description: String = "",
     val reference: String = "",   // kitob nomi .pdf, .jpg lari bilan
     val title: String = "",
     val year: String = "",
-    val readerPages: Int = 0
+    val readerPages: Int = 0,
+    val save: String = "0"
 ) {
     fun toData() = BookData(
         author = author,

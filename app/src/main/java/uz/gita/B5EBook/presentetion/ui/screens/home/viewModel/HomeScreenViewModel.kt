@@ -6,19 +6,16 @@ import uz.gita.B5EBook.data.model.BookData
 import uz.gita.B5EBook.data.model.LastReadBook
 
 interface HomeScreenViewModel {
-    val getAllBooksLiveData: LiveData<List<BookData>>
-    val getLastBooksLiveData: LiveData<LastReadBook>
-    val getAuthorsLiveData: LiveData<List<AuthorData>>
+    val loadBooks: LiveData<List<BookData>>
     val clickItem: LiveData<BookData>
-    val clickMenuLiveData: LiveData<Unit>
     val clickMoreButton: LiveData<Unit>
+    val searchWordsLiveData: LiveData<List<BookData>>
 
     fun clickItemSelected(data: BookData)
-    fun getBooks()
-    fun getLastReadBooks()
-    fun getAuthors()
-    fun clickMenu()
+    fun loadBooks()
     fun clickMoreButton()
+
+    fun search(s: String)
 
 
 //    fun loadBook(url: String)

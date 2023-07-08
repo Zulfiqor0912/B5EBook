@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.bumptech.glide.Glide
+import dagger.hilt.android.AndroidEntryPoint
 import uz.gita.B5EBook.data.model.BookData
 
 import uz.gita.B5EBook.presentetion.ui.screens.desc.viewModel.DescScreenViewModel
@@ -17,6 +18,7 @@ import uz.gita.firebaseexam.R
 import uz.gita.firebaseexam.databinding.ScreenDescBinding
 
 
+@AndroidEntryPoint
 class DescScreen : Fragment(R.layout.screen_desc) {
     private val binding by viewBinding(ScreenDescBinding::bind)
     private val viewModel: DescScreenViewModel by viewModels<DescScreenViewModelImpl>()
