@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashScreen"
-        android:name="uz.gita.firebaseexam.presentetion.ui.screens.splash.SplashScreen"
+        android:name="uz.gita.B5EBook.presentetion.ui.screens.splash.SplashScreen"
         android:label="SplashScreen"
         tools:layout="@layout/screen_splash">
         <action
@@ -18,12 +18,12 @@
     </fragment>
     <fragment
         android:id="@+id/favouriteScreen"
-        android:name="uz.gita.firebaseexam.presentetion.ui.screens.favourite.FavouriteScreen"
+        android:name="uz.gita.B5EBook.presentetion.ui.screens.favourite.FavouriteScreen"
         android:label="FavouriteScreen"
         tools:layout="@layout/screen_favourite"/>
     <fragment
         android:id="@+id/homeScreen"
-        android:name="uz.gita.firebaseexam.presentetion.ui.screens.home.HomeScreen"
+        android:name="uz.gita.B5EBook.presentetion.ui.screens.home.HomeScreen"
         tools:layout="@layout/screen_home"
         android:label="HomeScreen" >
         <action
@@ -33,23 +33,23 @@
     </fragment>
     <fragment
         android:id="@+id/descScreen"
-        android:name="uz.gita.firebaseexam.presentetion.ui.screens.desc.DescScreen"
+        android:name="uz.gita.B5EBook.presentetion.ui.screens.desc.DescScreen"
         tools:layout="@layout/screen_desc"
         android:label="DescScreen" >
         <argument
             android:name="data"
-            app:argType="uz.gita.firebaseexam.data.model.BookData" />
+            app:argType="uz.gita.B5EBook.data.model.BookData" />
         <action
             android:id="@+id/action_descScreen_to_readScreen"
             app:destination="@id/readScreen" />
     </fragment>
     <fragment
         android:id="@+id/readScreen"
-        android:name="uz.gita.firebaseexam.presentetion.ui.screens.read.ReadScreen"
+        android:name="uz.gita.B5EBook.presentetion.ui.screens.read.ReadScreen"
         android:label="ReadScreen"
         tools:layout="@layout/screen_read">
         <argument
             android:name="data"
-            app:argType="uz.gita.firebaseexam.data.model.BookData" />
+            app:argType="uz.gita.B5EBook.data.model.BookData" />
     </fragment>
 </navigation>

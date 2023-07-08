@@ -7,7 +7,7 @@
 
 
     <application
-        android:name="uz.gita.firebaseexam.app.App"
+        android:name="uz.gita.B5EBook.app.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,7 +18,7 @@
         android:theme="@style/Theme.FireBaseExam"
         tools:targetApi="31">
         <activity
-            android:name="uz.gita.firebaseexam.MainActivity"
+            android:name="uz.gita.B5EBook.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustNothing">
             <intent-filter>
