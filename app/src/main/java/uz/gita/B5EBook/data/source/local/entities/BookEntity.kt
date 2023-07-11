@@ -10,12 +10,11 @@ data class BookEntity(
     val bookUrl: String = "",
     val coverUrl: String = "",
     val genre: String = "",
-    @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
     val page: String = "",
     val rate: Int = 0,
     val description: String = "",
     val reference: String = "",   // kitob nomi .pdf, .jpg lari bilan
+    @PrimaryKey
     val title: String = "",
     val year: String = "",
     val readerPages: Int = 0,
@@ -26,11 +25,12 @@ data class BookEntity(
         bookUrl = bookUrl,
         coverUrl = coverUrl,
         genre = genre,
-        id = id,
         page = page,
         rate = rate,
         reference = reference,
         title = title,
-        year = year
+        year = year,
+        description = description,
+        save = save
     )
 }

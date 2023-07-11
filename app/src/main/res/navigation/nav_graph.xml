@@ -17,10 +17,14 @@
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/favouriteScreen"
-        android:name="uz.gita.B5EBook.presentetion.ui.screens.favourite.FavouriteScreen"
+        android:id="@+id/saveScreen"
+        android:name="uz.gita.B5EBook.presentetion.ui.screens.saved.SavedScreen"
         android:label="FavouriteScreen"
-        tools:layout="@layout/screen_favourite"/>
+        tools:layout="@layout/screen_saved">
+        <action
+            android:id="@+id/action_saveScreen_to_descScreen"
+            app:destination="@id/descScreen" />
+    </fragment>
     <fragment
         android:id="@+id/homeScreen"
         android:name="uz.gita.B5EBook.presentetion.ui.screens.home.HomeScreen"
@@ -30,6 +34,12 @@
             android:id="@+id/action_homeScreen_to_descScreen"
             app:destination="@id/descScreen"
             app:enterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_homeScreen_to_saveScreen"
+            app:destination="@id/saveScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
     </fragment>
     <fragment
         android:id="@+id/descScreen"
@@ -52,4 +62,21 @@
             android:name="data"
             app:argType="uz.gita.B5EBook.data.model.BookData" />
     </fragment>
+    <dialog
+        android:id="@+id/myBottomSheetDialog"
+        android:name="uz.gita.B5EBook.presentetion.dialog.MyBottomSheetDialog"
+        android:label="MyBottomSheetDialog"
+        tools:layout="@layout/dialog_bottomsheet">
+        <action
+            android:id="@+id/action_myBottomSheetDialog_to_saveScreen"
+            app:destination="@id/saveScreen" />
+        <action
+            android:id="@+id/action_myBottomSheetDialog_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </dialog>
+    <fragment
+        android:id="@+id/infoScreen"
+        android:name="uz.gita.B5EBook.presentetion.ui.screens.about.InfoScreen"
+        android:label="InfoScreen"
+        tools:layout="@layout/screen_info"/>
 </navigation>

@@ -4,13 +4,13 @@
     android:id="@+id/item_book"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="8dp"
     android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="8dp"
     android:background="@drawable/bg_item"
-    android:foreground="?selectableItemBackgroundBorderless"
-    android:elevation="4dp"
     android:clickable="true"
-    android:focusable="true">
+    android:elevation="4dp"
+    android:focusable="true"
+    android:foreground="?selectableItemBackgroundBorderless">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_book"
@@ -23,36 +23,36 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/book_name"
+        style="@style/nunito_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:text="Molxona"
         android:textColor="@color/black"
         android:textSize="20sp"
-        style="@style/nunito_bold"
         app:layout_constraintBottom_toTopOf="@id/book_author"
         app:layout_constraintStart_toEndOf="@+id/image_book"
         app:layout_constraintTop_toTopOf="@+id/image_book" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/book_author"
+        style="@style/nunito_italic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="6dp"
         android:text="Jorj Oruel"
         android:textColor="@color/black"
         android:textSize="14sp"
-        style="@style/nunito_italic"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/book_name"
         app:layout_constraintTop_toBottomOf="@+id/book_name" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="22dp"
+        android:layout_width="260dp"
+        android:layout_height="16dp"
         android:layout_marginHorizontal="16dp"
-        android:background="@color/backButton"
+        android:background="@drawable/bg_line"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?selectableItemBackground"
@@ -61,30 +61,58 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_book">
 
-        <Space
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/start_reading_text"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:textSize="16sp" />
-
-        <FrameLayout
-            android:layout_width="56dp"
             android:layout_height="match_parent"
-            android:background="@color/secondButton">
+            android:background="@drawable/bg_line2"
+            android:orientation="horizontal"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
 
-            <TextView
-                android:id="@+id/percentage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="0%"
-                android:textColor="@color/onPrimary"
-                android:textSize="16sp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0" />
 
-        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_pages"
+        style="@style/nunito_italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="400"
+        android:textColor="#75000000"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/of"
+        style="@style/nunito_italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text="of"
+        android:textColor="#75000000"
+        app:layout_constraintBottom_toBottomOf="@id/item_pages"
+        app:layout_constraintEnd_toStartOf="@id/item_pages" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_book_currentPage"
+        style="@style/nunito_italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text="0"
+        android:textColor="#75000000"
+        app:layout_constraintBottom_toBottomOf="@id/of"
+        app:layout_constraintEnd_toStartOf="@id/of" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

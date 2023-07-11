@@ -40,9 +40,10 @@ class RepositoryImpl @Inject constructor() : Repository {
                         title = queryDocumentSnapshot.get("title") as String,
                         coverUrl = queryDocumentSnapshot.get("imageUrl") as String,
                         bookUrl = queryDocumentSnapshot.get("bookUrl") as String,
-                        description = queryDocumentSnapshot.get("info") as String
-
+                        description = queryDocumentSnapshot.get("info") as String,
+                        reference = queryDocumentSnapshot.get("reference") as String
                     )
+                    Log.d("DDD", data.description)
                     list.add(data)
                     if (localStorage?.getFirstApp()!!) {
                         bookDao.insertBook(data.toEntity())

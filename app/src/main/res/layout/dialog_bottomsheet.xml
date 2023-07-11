@@ -15,12 +15,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <LinearLayout
-        android:id="@+id/update"
+        android:id="@+id/saves"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="32dp"
         android:foreground="?selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +36,7 @@
             android:layout_marginHorizontal="8dp"
             android:layout_marginVertical="4dp"
             android:padding="2dp"
-            android:src="@drawable/refresh" />
+            android:src="@drawable/save" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -40,7 +44,7 @@
             android:layout_marginStart="12dp"
             style="@style/nunito_regular"
             android:textColor="@color/black"
-            android:text="Ckeck for update books"
+            android:text="Save books"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -51,10 +55,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
         android:foreground="?selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/update">
+        app:layout_constraintTop_toBottomOf="@id/saves">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
@@ -80,6 +86,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
         android:foreground="?selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,6 +117,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
         android:foreground="?selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,6 +148,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
         android:foreground="?selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

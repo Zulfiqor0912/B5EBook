@@ -19,8 +19,7 @@
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                app:layout_collapseMode="pin"
-                app:menu="@menu/info_menu">
+                app:layout_collapseMode="pin">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/desc_back"
@@ -34,11 +33,23 @@
                     android:src="@drawable/baseline_arrow_back_ios_new_24" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_screen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Molxona"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/button_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/save_off"
+                    android:layout_gravity="end"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"/>
             </androidx.appcompat.widget.Toolbar>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,11 +96,12 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/button_download"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="54dp"
                     android:layout_marginHorizontal="18dp"
                     android:layout_marginVertical="16dp"
                     android:background="?selectableItemBackgroundBorderless"
                     android:clickable="true"
+                    android:visibility="visible"
                     android:focusable="true"
                     android:foreground="?selectableItemBackgroundBorderless"
                     android:src="@drawable/bg_button"
@@ -99,15 +111,47 @@
                     app:layout_constraintTop_toBottomOf="@+id/book_author_desc" />
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView3"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
+                    android:padding="4dp"
                     android:src="@drawable/baseline_save_alt_24"
                     app:layout_constraintBottom_toBottomOf="@+id/button_download"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/button_download" />
 
-
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_openBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@drawable/bg_button"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="O'qish"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    style="@style/nunito_bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/book_author_desc"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/pdf_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/pdf"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/button_openBook"
+                    app:layout_constraintEnd_toEndOf="@+id/button_openBook"
+                    app:layout_constraintStart_toStartOf="@+id/button_openBook"
+                    app:layout_constraintTop_toTopOf="@+id/button_openBook" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -124,23 +168,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:justificationMode="inter_word"
-            android:text="Amid the ongoing deadly power struggle between the top military leaders of Sudan, evacuations have begun, including as part of India’s Operation Kaveri, which has helped more than 3,500 Indian citizens living in the country. Raghuveer Sharma is one of them. He gave UN News a first-hand account of the tragic situation unfolding in Sudan.The World Health Organization (WHO) declared an end to the COVID-19 global public health emergency on 3 May 2023, following more than three years of crisis, and slow recovery – although the virus continues to kill and mutate. UN photographers across the world have captured moments of agony, innovation, and human endurance throughout the pandemic, which has killed nearly seven million people, and infected over 765 million.The number of internally displaced (IDPs) in Sudan has more than doubled in just the last week, since armed clashes erupted between rival militaries in multiple cities across Sudan, the International Organization for Migration (IOM) said on Tuesday.The values of human dignity and freedom, enshrined in the UN’s founding Charter in 1945, have never been so under threat, warned the Secretary-General on Tuesday, delivering a wide-ranging speech in Spain after receiving the Carlos V European Award." />
+            android:text="Amid the ongoing deadly power struggle between the top military leaders of Sudan, evacuations have begun, including as part of India’s Operation Kaveri, which has helped more than 3,500 Indian citizens living in the country. Raghuveer Sharma is one of them. He gave UN News a first-hand account of the tragic situation unfolding in Sudan.The World Health Organization (WHO) declared an end to the COVID-19 global public health emergency on 3 May 2023, following more than three years of crisis, and slow recovery – although the virus continues to kill and mutate. UN photographers across the world have captured moments of agony, innovation, and human endurance throughout the pandemic, which has killed nearly seven million people, and infected over 765 million.The number of internally displaced (IDPs) in Sudan has more than doubled in just the last week, since armed clashes erupted between rival militaries in multiple cities across Sudan, the International Organization for Migration (IOM) said on Tuesday.The values of human dignity and freedom, enshrined in the UN’s founding Charter in 1945, have never been so under threat, warned the Secretary-General on Tuesday, delivering a wide-ranging speech in Spain after receiving the Carlos V European Award."
+            android:textColor="@color/black" />
 
     </androidx.core.widget.NestedScrollView>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/read_book_button"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/bg_button"
-        android:elevation="4dp"
-        android:foreground="?selectableItemBackgroundBorderless"
-        android:text="Read Book"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

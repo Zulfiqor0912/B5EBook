@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.FireBaseExam" parent="Base.Theme.FireBaseExam" />
+    <style name="Theme.FireBaseExam" parent="Base.Theme.FireBaseExam">
+        <item name="colorPrimary">#4C67DC</item>
+    </style>
+
 </resources>

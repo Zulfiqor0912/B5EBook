@@ -94,6 +94,12 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:2.45"
     implementation "androidx.hilt:hilt-navigation-fragment:1.0.0"
 
+    //refresh
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    // Android Runtime Permission Library
+    implementation 'com.karumi:dexter:6.2.3'
+
 
 
 

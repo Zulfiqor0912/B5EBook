@@ -6,6 +6,10 @@
         android:title="Home" />
     <item
         android:id="@+id/favouriteScreen"
-        android:icon="@drawable/baseline_bookmark_24"
+        android:icon="@drawable/save_on"
         android:title="Save" />
+    <item
+        android:id="@+id/exploreScreen"
+        android:icon="@drawable/baseline_explore_24"
+        android:title="" />
 </menu>
