@@ -67,9 +67,8 @@ class HomeScreen : Fragment(R.layout.screen_home) {
                     query?.let {
                         if (query.isNotEmpty()) {
                             viewModel.search("%${it.trim()}%")
-                            binding.isSearchEmpty.visibility = View.VISIBLE
                         } else {
-                            binding.isSearchEmpty.visibility = View.GONE
+
                             Log.d("YYY", "${viewModel.loadBooks.value?.size}")
                             adapter.submitList(viewModel.loadBooks.value)
                         }
@@ -81,9 +80,8 @@ class HomeScreen : Fragment(R.layout.screen_home) {
                     newText?.let {
                         if (newText.isNotEmpty()) {
                             viewModel.search("%${it.trim()}%")
-                            binding.isSearchEmpty.visibility = View.VISIBLE
                         } else {
-                            binding.isSearchEmpty.visibility = View.GONE
+
                             Log.d("LLL", "${viewModel.loadBooks.value?.size}")
                             adapter.submitList(viewModel.loadBooks.value)
                         }
@@ -106,9 +104,9 @@ class HomeScreen : Fragment(R.layout.screen_home) {
 //            if
 //        }
         if (list.isNotEmpty()) {
-            binding.isSearchEmpty.visibility = View.GONE
+
         } else {
-            binding.isSearchEmpty.visibility = View.GONE
+
         }
 
         adapter.submitList(list)
@@ -122,9 +120,8 @@ class HomeScreen : Fragment(R.layout.screen_home) {
 
     private val searchResultObserver = Observer<List<BookData>> { list ->
         if (list.isNotEmpty()) {
-            binding.isSearchEmpty.visibility = View.GONE
+
         } else {
-            binding.isSearchEmpty.visibility = View.VISIBLE
         }
         for (element in list) {
             Log.d("QQQ", element.title)

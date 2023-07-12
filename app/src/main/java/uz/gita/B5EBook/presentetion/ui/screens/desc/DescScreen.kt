@@ -1,6 +1,7 @@
 package uz.gita.B5EBook.presentetion.ui.screens.desc
 
 import android.Manifest
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -70,6 +71,7 @@ class DescScreen : Fragment(R.layout.screen_desc) {
                     val bar = CircularProgressDrawable(requireActivity())
                     bar.strokeWidth = 5f
                     bar.centerRadius = 28f
+                    bar.setColorSchemeColors(Color.WHITE)
                     bar.start()
                     appCompatImageView3.setImageDrawable(bar)
 
@@ -130,7 +132,7 @@ class DescScreen : Fragment(R.layout.screen_desc) {
     }
 
     private val openHomeObserver = Observer<Unit> {
-        findNavController().popBackStack()
+        findNavController().navigateUp()
     }
 
     private val checkObserver = Observer<Boolean> {
